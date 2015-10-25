@@ -1,9 +1,37 @@
 /* Construct a simulation of Math.random()
  * to verify how truly random it is
  */
-
+var case1= 0, case2= 0, case3= 0, case4= 0;
+var numOfExpressions = 10000000
 
 //First, construct a for loop so we can run Math.random() x number of times
+for(var i=0; i<numOfExpressions; i=(i+1)){
+	var newNumber = Math.random();
+
+	if(newNumber < .25){
+	//do something
+	case1 += 1;
+
+}else if(newNumber < .5){
+	//do something
+	case2 += 1;
+
+}else if(newNumber < .75){
+	//do something
+	case3 += 1;
+
+}else{
+	case4 += 1;
+}
+}
+
+
+console.log(case1);
+console.log(case2);
+console.log(case3);
+console.log(case4);
+
+
 
 
 //within the for loop, run Math.random()
